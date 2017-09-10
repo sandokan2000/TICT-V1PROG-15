@@ -1,0 +1,5 @@
+uurloon = eval(input('Je uurloon: '))
+aantaluren = eval(input('Aantal gewerkte uren: '))
+bonus = eval(input('Gekregen bonus: '))
+TOTAALloon = str(uurloon * aantaluren + bonus)
+print('Met ' + str(aantaluren) + ' gewerkte uren heb je ' + str(TOTAALloon) + ' euro verdiend')
