@@ -1,0 +1,15 @@
+infile = open ('Voorbeeld5_5.txt', 'r')
+inhoud = infile.read()
+infile.close()
+print(inhoud)
+
+infile1 = open('Voorbeeld5_5.txt', 'r')
+inhoud1 = infile1.read()
+infile1.close()
+gesplitst = inhoud1.split()
+print(gesplitst)
+
+infile2 = open('Voorbeeld5_5.txt', 'r')
+inhoud2 = infile2.readlines()
+infile2.close()
+print(inhoud2)
