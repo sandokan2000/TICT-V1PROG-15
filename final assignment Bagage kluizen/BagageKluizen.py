@@ -14,11 +14,14 @@ def nieuwe_kluis():
         kluisnummer.remove(regelsgesplitst[0])
     if len(kluisnummer) != 0:
         wachtwoord = input('Typ hier de kluiscode voor uw kluis in: ')
-        outfile = open('kluizen.txt', 'a')
-        s = kluisnummer[0] + '; ' + wachtwoord + '\n'
-        outfile.write(s)
-        outfile.close
-        print('U heeft kluisnummer: ' + kluisnummer[0])
+        if len(wachtwoord) < 4:
+            print('Uw wachtwoord is te kort, deze moet minimaal 4 tekens lang zijn!')
+        else:
+            outfile = open('kluizen.txt', 'a')
+            s = kluisnummer[0] + '; ' + wachtwoord + '\n'
+            outfile.write(s)
+            outfile.close
+            print('U heeft kluisnummer: ' + kluisnummer[0])
     else:
         print('Er zijn helaas geen kluisjes meer beschikbaar!')
 
@@ -33,6 +36,7 @@ def kluis_openen():
         print('U heeft de juiste combinatie ingevoerd!')
     else:
         print('De combinatie van kluisnummer en kluiscode is niet juist!')
+
 print('1: Ik wil weten hoeveel kluizen er nog beschibaar zijn \n2: Ik wil een nieuwe kluis \n3: Ik wil iets uit mijn kluis halen')
 
 MenuKeuze = (input('\nWelke optie wilt u gebruik van maken? '))
