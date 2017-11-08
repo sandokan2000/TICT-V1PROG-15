@@ -5,6 +5,7 @@ def inlezen_beginstation(stations):
     return begin_bestemming
 
 def inlezen_eindstation(stations, begin_bestemming):
+
     eind_bestemming = input('Wat is uw eind bestemming? ')
     while eind_bestemming not in stations:
         eind_bestemming = input('Dit station bestaat helaas niet.\nWat is uw eind bestemming? ')
